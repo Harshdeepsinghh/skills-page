@@ -13,7 +13,7 @@ class FAQs extends StatelessWidget {
         Text(
           'Frequently Asked Questions',
           style:
-              TextStyle(fontSize: 18, fontWeight: FontWeight.w800, height: 4),
+              TextStyle(fontSize: 16, fontWeight: FontWeight.w800, height: 4),
         ),
         kRepeatedQuestionsCard(context,
             question: 'Are these courses offered by Ostello?'),

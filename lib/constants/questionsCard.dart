@@ -23,6 +23,7 @@ kRepeatedQuestionsCard(BuildContext context, {required String question}) {
             ),
             Spacer(),
             CircleAvatar(
+              radius: 15,
               backgroundColor: primaryColor(),
               child: Icon(
                 Icons.keyboard_arrow_down,

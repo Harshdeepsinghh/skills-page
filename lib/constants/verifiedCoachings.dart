@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:skill_section/constants/colors.dart';
-
 import 'package:dotted_line/dotted_line.dart';
-import 'package:flutter/material.dart';
-import 'package:skill_section/constants/colors.dart';
-import 'package:skill_section/constants/verifiedCoachings.dart';
 
 verifiedCoachings(
     {required String image,
@@ -16,10 +12,10 @@ verifiedCoachings(
     required String course,
     required}) {
   return Container(
+    margin: EdgeInsets.symmetric(horizontal: 15),
     decoration: BoxDecoration(
         color: whiteColor(), borderRadius: BorderRadius.circular(40)),
     width: 300,
-    height: 200,
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -58,13 +54,14 @@ Row kDiscountLabel() {
     children: [
       SvgPicture.asset(
         "assets/images/bxs_offer.svg",
-        height: 25,
+        height: 18,
       ),
+      SizedBox(width: 5),
       Text(
         'Get 15% OFF on your enrolment',
         style: TextStyle(
           color: darkBlueColor(),
-          fontSize: 12,
+          fontSize: 8,
           fontWeight: FontWeight.w900,
         ),
       ),
@@ -77,9 +74,9 @@ Row kCoursesNames({required String course}) {
     children: [
       SvgPicture.asset(
         "assets/images/open book.svg",
-        height: 25,
+        height: 18,
       ),
-      SizedBox(width: 20),
+      SizedBox(width: 10),
       SizedBox(
         width: 200,
         child: Text(
@@ -88,7 +85,7 @@ Row kCoursesNames({required String course}) {
           style: TextStyle(
             overflow: TextOverflow.ellipsis,
             color: greyColor().withOpacity(0.7),
-            fontSize: 12,
+            fontSize: 8,
             fontWeight: FontWeight.w600,
           ),
         ),
@@ -105,12 +102,13 @@ Row kInstituteLocationAndDistance(
         distance,
         style: TextStyle(
           color: greyColor(),
+          fontSize: 12,
           fontWeight: FontWeight.w400,
         ),
       ),
       SizedBox(width: 5),
       SvgPicture.asset(
-        "assets/images/location.svg",
+        "assets/images/pin2.svg",
         // ignore: deprecated_member_use
         color: greyColor(),
       ),
@@ -118,8 +116,9 @@ Row kInstituteLocationAndDistance(
       Text(
         location,
         style: TextStyle(
+          fontSize: 10,
           color: greyColor(),
-          fontWeight: FontWeight.w700,
+          fontWeight: FontWeight.w600,
         ),
       ),
     ],
@@ -133,7 +132,6 @@ Row kInstituteLabelAndRating({required String label, required String rating}) {
       Text(
         label,
         style: TextStyle(
-          fontSize: 16,
           fontWeight: FontWeight.w800,
           letterSpacing: 0.14,
         ),
@@ -148,11 +146,16 @@ Row kInstituteLabelAndRating({required String label, required String rating}) {
             children: [
               Text(
                 rating,
-                style: TextStyle(color: whiteColor()),
+                style: TextStyle(
+                  color: whiteColor(),
+                  fontSize: 10,
+                  fontWeight: FontWeight.w800,
+                ),
               ),
               Icon(
                 Icons.star,
                 color: whiteColor(),
+                size: 18,
               )
             ],
           ),
@@ -164,15 +167,13 @@ Row kInstituteLabelAndRating({required String label, required String rating}) {
 
 kRepeatedVerifiedList({required String label}) {
   return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
     child: Row(
       children: [
-        Icon(
-          Icons.check,
-          color: greenColor(),
-        ),
+        SvgPicture.asset("assets/images/typcn_tick.svg"),
         Text(
           label,
+          style: TextStyle(fontSize: 11),
         )
       ],
     ),

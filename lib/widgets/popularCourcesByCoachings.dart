@@ -12,7 +12,7 @@ class PopularCourcesByCoachings extends StatelessWidget {
     return Container(
         padding: EdgeInsets.symmetric(vertical: 30),
         width: double.infinity,
-        height: 600,
+        height: 590,
         color: secondaryColor(),
         child: ListView(
             shrinkWrap: true,

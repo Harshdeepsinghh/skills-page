@@ -17,7 +17,9 @@ Container kRepeatedCategoryCard(
               child: Text(
                 label,
                 style: TextStyle(
-                    color: primaryColor(), fontWeight: FontWeight.w800),
+                    fontSize: 15,
+                    color: primaryColor(),
+                    fontWeight: FontWeight.w800),
               ),
             ),
             Image.asset(image),

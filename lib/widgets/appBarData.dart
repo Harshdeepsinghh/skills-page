@@ -19,16 +19,17 @@ class AppBarData extends StatelessWidget {
             Row(
               children: [
                 SvgPicture.asset("assets/images/backIcon.svg"),
-                SizedBox(width: 10),
+                SizedBox(width: 20),
                 Text(
                   "Skills",
                   style: TextStyle(
                       color: whiteColor(),
-                      fontSize: 20,
+                      fontSize: 16,
                       fontWeight: FontWeight.w600),
                 ),
               ],
             ),
+            SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -44,7 +45,7 @@ class AppBarData extends StatelessWidget {
                           Text(
                             "Ghandhinagar",
                             style: TextStyle(
-                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
                                 color: whiteColor(),
                                 overflow: TextOverflow.ellipsis),
                             maxLines: 1,
@@ -58,8 +59,10 @@ class AppBarData extends StatelessWidget {
                         ],
                       ),
                       Text(
-                        'Near SKM College, Gandhinagar, Ahmedabad djdj',
+                        'Near SKM College, Gandhinagar, Ahmedabad',
                         style: TextStyle(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 12,
                             color: whiteColor(),
                             overflow: TextOverflow.ellipsis),
                         maxLines: 1,
@@ -68,7 +71,11 @@ class AppBarData extends StatelessWidget {
                     ],
                   ),
                 ),
-                SvgPicture.asset("assets/images/profile.svg")
+                SvgPicture.asset(
+                  "assets/images/profile.svg",
+                  width: 37,
+                  height: 38,
+                )
               ],
             ),
             SizedBox(height: 20),
@@ -77,9 +84,14 @@ class AppBarData extends StatelessWidget {
                 fillColor: whiteColor(),
                 filled: true,
                 contentPadding: EdgeInsets.symmetric(vertical: 15),
-                prefixIcon: Icon(Icons.search, color: greyColor()),
+                prefixIcon: Image.asset(
+                  "assets/images/search.png",
+                  scale: 1,
+                ),
+                // Icon(Icons.search, color: greyColor().withOpacity(0.5)),
                 hintText: "Search for coachings, exams, courses & more...",
-                hintStyle: TextStyle(fontSize: 14),
+                hintStyle: TextStyle(
+                    fontSize: 12, color: greyColor().withOpacity(0.5)),
                 suffixIcon: SizedBox(
                   width: 80,
                   child: Row(
@@ -87,12 +99,11 @@ class AppBarData extends StatelessWidget {
                       SizedBox(
                         height: 30,
                         child: VerticalDivider(
-                          thickness: 1,
-                          color: greyColor(),
+                          color: greyColor().withOpacity(0.5),
                         ),
                       ),
                       CircleAvatar(
-                        radius: 15,
+                        radius: 11,
                         backgroundColor: primaryColor(),
                         child: SvgPicture.asset(
                             "assets/images/textfield icon.svg"),
@@ -102,9 +113,19 @@ class AppBarData extends StatelessWidget {
                     ],
                   ),
                 ),
-                border: OutlineInputBorder(
+                enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
-                  borderSide: BorderSide(width: 0),
+                  borderSide: BorderSide(
+                    width: 0,
+                    color: secondaryColor(),
+                  ),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                  borderSide: BorderSide(
+                    width: 0,
+                    color: secondaryColor(),
+                  ),
                 ),
               ),
             ),

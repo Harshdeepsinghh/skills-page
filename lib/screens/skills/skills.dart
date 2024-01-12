@@ -24,7 +24,7 @@ class _SkillsScreenState extends State<SkillsScreen> {
     return Scaffold(
       backgroundColor: whiteColor(),
       appBar: AppBar(
-        toolbarHeight: 200,
+        toolbarHeight: 210,
         flexibleSpace: Container(
           decoration: BoxDecoration(
             gradient: primaryLinearColor(),
@@ -33,72 +33,75 @@ class _SkillsScreenState extends State<SkillsScreen> {
         ),
       ),
       body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Center(
-                child: Container(
-                  width: double.infinity,
-                  child: Image.asset(
-                    "assets/images/Ostello Card.png",
-                    fit: BoxFit.fitWidth,
-                  ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Center(
+              child: Container(
+                margin:
+                    const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+                width: double.infinity,
+                child: Image.asset(
+                  "assets/images/Ostello Card.png",
+                  fit: BoxFit.fitWidth,
                 ),
               ),
-              // Topics Based on the Interest
-              Text(
+            ),
+            // Topics Based on the Interest
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: Text(
                 'Topics Based On Your Interest',
                 style: TextStyle(
-                  height: 3,
-                  color: blackColor(),
-                  fontSize: 18,
+                  fontSize: 16,
                   fontWeight: FontWeight.w800,
                 ),
               ),
+            ),
+            SizedBox(height: 10),
+            Topics(),
+            //Filters
+            Filters(),
 
-              Topics(),
-              //Filters
-              Filters(),
-
-              //Certified Courses by Coachings
-              LabelAndViewAll(label: "Certified Courses by Coachings"),
-              CertifiedCoachings(),
-
-              //Learn Online and Offline
-              Center(
-                child: Text(
-                  'Learn Online or Offline',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                    height: 2,
-                  ),
+            //Certified Courses by Coachings
+            LabelAndViewAll(label: "Certified Courses by Coachings"),
+            CertifiedCoachings(),
+            SizedBox(height: 10),
+            //Learn Online and Offline
+            Center(
+              child: Text(
+                'Learn Online or Offline',
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w800,
+                  height: 2,
                 ),
               ),
-              SizedBox(height: 20),
-              LearnOnlineAndOffline(),
+            ),
+            SizedBox(height: 20),
+            LearnOnlineAndOffline(),
 
-              // Verified Coachings
-              LabelAndViewAll(label: 'Ostello Verified Coachings'),
-              VerfiedCoachings(),
+            // Verified Coachings
+            LabelAndViewAll(label: 'Ostello Verified Coachings'),
+            VerfiedCoachings(),
+            SizedBox(height: 30),
+            // Explore Categories
+            LabelAndViewAll(
+              label: 'Explore Categories',
+            ),
+            Categories(),
+            SizedBox(height: 20),
+            // Popular Courses By Coachings
+            LabelAndViewAll(label: "Popular Courses By Coachings"),
+            PopularCourcesByCoachings(),
 
-              // Explore Categories
-              LabelAndViewAll(
-                label: 'Explore Categories',
-              ),
-              Categories(),
+            // FAQs
+            FAQs(),
 
-              // Popular Courses By Coachings
-              LabelAndViewAll(label: "Popular Courses By Coachings"),
-              PopularCourcesByCoachings(),
-
-              // FAQs
-              FAQs(),
-
-              // Chat With Us
-              Center(
+            // Chat With Us
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 0),
+              child: Center(
                   heightFactor: 1.5,
                   child: Container(
                     width: double.infinity,
@@ -107,8 +110,8 @@ class _SkillsScreenState extends State<SkillsScreen> {
                       fit: BoxFit.fitWidth,
                     ),
                   )),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

@@ -12,7 +12,7 @@ class VerfiedCoachings extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 30),
       width: double.infinity,
-      height: 430,
+      height: 390,
       color: cardBackgroundColor(),
       child: ListView(
         shrinkWrap: true,
@@ -22,9 +22,9 @@ class VerfiedCoachings extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 50),
+                SizedBox(height: 30),
                 Container(
-                  width: 180,
+                  width: 160,
                   padding: EdgeInsets.all(8),
                   decoration: ShapeDecoration(
                     color: primaryColor(),
@@ -40,7 +40,8 @@ class VerfiedCoachings extends StatelessWidget {
                       Text(
                         "Ostello Verified",
                         style: TextStyle(
-                          fontWeight: FontWeight.w800,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w900,
                           color: whiteColor(),
                         ),
                       ),
@@ -52,7 +53,9 @@ class VerfiedCoachings extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 20),
+                SizedBox(
+                  height: 20,
+                ),
                 kRepeatedVerifiedList(label: "Coaching Videos"),
                 kRepeatedVerifiedList(label: "Learn Anytime"),
                 kRepeatedVerifiedList(label: "Lifetime Access"),
@@ -69,7 +72,6 @@ class VerfiedCoachings extends StatelessWidget {
             location: 'Kalkaji , New Delhi',
             course: 'Physics . Chemistry . Biology .  Maths . English ',
           ),
-          SizedBox(width: 20),
           verifiedCoachings(
             image: "assets/images/akash coaching.png",
             institute: 'Another Institute',

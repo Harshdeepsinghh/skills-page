@@ -10,26 +10,30 @@ class LabelAndViewAll extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Text(
-          label,
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 16,
-            height: 3,
-            fontWeight: FontWeight.w800,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 0),
+      child: Row(
+        children: [
+          Text(
+            label,
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 16,
+              height: 3,
+              fontWeight: FontWeight.w800,
+            ),
           ),
-        ),
-        Spacer(),
-        Text(
-          'view all >',
-          style: TextStyle(
-            color: primaryColor(),
-            fontWeight: FontWeight.w500,
-          ),
-        )
-      ],
+          Spacer(),
+          Text(
+            'view all >',
+            style: TextStyle(
+              fontSize: 11,
+              color: primaryColor(),
+              fontWeight: FontWeight.w500,
+            ),
+          )
+        ],
+      ),
     );
   }
 }

@@ -20,7 +20,18 @@ Container kRepeatedCourcesByCoachings(
             Image.asset(
               image,
               fit: BoxFit.fitWidth,
-              scale: 0.8,
+              scale: 0.7,
+            ),
+            Positioned.fill(
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(35),
+                      topRight: Radius.circular(35)),
+                  color: Colors.black
+                      .withOpacity(0.4), // Background color with opacity
+                ),
+              ),
             ),
             Positioned(
                 top: 50,
@@ -54,14 +65,14 @@ Container kRepeatedCourcesByCoachings(
           ],
         ),
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 12),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 label,
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 14,
                   fontWeight: FontWeight.w800,
                   height: 2.5,
                 ),
@@ -71,34 +82,39 @@ Container kRepeatedCourcesByCoachings(
                 children: [
                   Text(
                     price,
-                    style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                    ),
+                    style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12),
                   ),
                   SizedBox(width: 10),
                   Text(
                     realPrice,
                     style: TextStyle(
                         color: primaryColor(),
+                        fontSize: 10,
                         fontWeight: FontWeight.w500,
                         decorationColor: primaryColor(),
                         decoration: TextDecoration.lineThrough),
                   ),
                 ],
               ),
+              SizedBox(height: 5),
               Row(
                 children: [
-                  Image.asset("assets/images/time.png"),
+                  Image.asset(
+                    "assets/images/time.png",
+                    scale: 0.9,
+                  ),
+                  SizedBox(width: 5),
                   Text(
                     '1 Year Course Duration',
                     style: TextStyle(
                       height: 1.7,
-                      fontSize: 12,
+                      fontSize: 10,
                       fontWeight: FontWeight.w400,
                     ),
                   ),
                 ],
               ),
+              SizedBox(height: 5),
               Row(
                 children: [
                   SvgPicture.asset(
@@ -110,7 +126,7 @@ Container kRepeatedCourcesByCoachings(
                     'Offline . Online',
                     style: TextStyle(
                       color: greyColor(),
-                      fontSize: 12,
+                      fontSize: 10,
                       fontWeight: FontWeight.w400,
                     ),
                   ),
@@ -125,7 +141,10 @@ Container kRepeatedCourcesByCoachings(
                 child: Center(
                   child: Text(
                     "Buy Now",
-                    style: TextStyle(color: whiteColor()),
+                    style: TextStyle(
+                        color: whiteColor(),
+                        fontSize: 12,
+                        fontWeight: FontWeight.w500),
                   ),
                 ),
               ),
@@ -137,7 +156,10 @@ Container kRepeatedCourcesByCoachings(
                 child: Center(
                   child: Text(
                     "View Syllabus",
-                    style: TextStyle(color: primaryColor()),
+                    style: TextStyle(
+                        color: primaryColor(),
+                        fontSize: 12,
+                        fontWeight: FontWeight.w500),
                   ),
                 ),
               ),
@@ -160,11 +182,14 @@ Row kRepeatedList({required String label}) {
     children: [
       Icon(
         Icons.circle,
-        size: 12,
-        color: greyColor(),
+        size: 10,
+        color: greyColor().withOpacity(0.7),
       ),
       SizedBox(width: 5),
-      Text(label),
+      Text(
+        label,
+        style: TextStyle(height: 1.8, color: greyColor(), fontSize: 12),
+      ),
     ],
   );
 }

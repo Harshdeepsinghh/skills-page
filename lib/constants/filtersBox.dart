@@ -12,7 +12,7 @@ Container kRepeatedFilterBox(
       borderRadius: BorderRadius.circular(40),
     ),
     child: Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.symmetric(horizontal: 12),
       child: Center(
           child: Text(
         label,
