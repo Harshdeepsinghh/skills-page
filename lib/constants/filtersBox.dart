@@ -4,7 +4,7 @@ import 'package:skill_section/constants/colors.dart';
 Container kRepeatedFilterBox(
     {required String label, required bool isSelected}) {
   return Container(
-    margin: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+    margin: EdgeInsets.symmetric(vertical: 20, horizontal: 4),
     decoration: BoxDecoration(
       color: isSelected ? secondaryColor() : null,
       border: Border.all(
@@ -12,12 +12,13 @@ Container kRepeatedFilterBox(
       borderRadius: BorderRadius.circular(40),
     ),
     child: Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12),
+      padding: const EdgeInsets.symmetric(horizontal: 15),
       child: Center(
           child: Text(
         label,
         style: TextStyle(
-          color: isSelected ? primaryColor() : null,
+          fontWeight: FontWeight.w800,
+          color: isSelected ? primaryColor() : greyColor(),
         ),
       )),
     ),

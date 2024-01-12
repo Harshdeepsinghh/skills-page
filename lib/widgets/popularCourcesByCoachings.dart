@@ -10,9 +10,9 @@ class PopularCourcesByCoachings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: EdgeInsets.symmetric(vertical: 30),
+        padding: EdgeInsets.symmetric(vertical: 15),
         width: double.infinity,
-        height: 590,
+        height: 520,
         color: secondaryColor(),
         child: ListView(
             shrinkWrap: true,

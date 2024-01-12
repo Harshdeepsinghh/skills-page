@@ -47,6 +47,7 @@ class _SkillsScreenState extends State<SkillsScreen> {
                 ),
               ),
             ),
+            SizedBox(height: 5),
             // Topics Based on the Interest
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -80,17 +81,20 @@ class _SkillsScreenState extends State<SkillsScreen> {
             ),
             SizedBox(height: 20),
             LearnOnlineAndOffline(),
+            SizedBox(height: 15),
 
             // Verified Coachings
             LabelAndViewAll(label: 'Ostello Verified Coachings'),
+            SizedBox(height: 5),
+
             VerfiedCoachings(),
-            SizedBox(height: 30),
+            SizedBox(height: 35),
             // Explore Categories
             LabelAndViewAll(
               label: 'Explore Categories',
             ),
             Categories(),
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             // Popular Courses By Coachings
             LabelAndViewAll(label: "Popular Courses By Coachings"),
             PopularCourcesByCoachings(),

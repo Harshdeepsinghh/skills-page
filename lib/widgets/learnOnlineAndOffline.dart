@@ -13,9 +13,9 @@ class LearnOnlineAndOffline extends StatelessWidget {
       shrinkWrap: true,
       gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
         maxCrossAxisExtent: 200, // Set the maximum width of each grid item
-        mainAxisSpacing: 10,
+        mainAxisSpacing: 5,
         crossAxisSpacing: 10,
-        childAspectRatio: 1.2,
+        childAspectRatio: 1.5,
       ),
       children: [
         kRepeatedOfflineOnlineCard(

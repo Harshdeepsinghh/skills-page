@@ -12,7 +12,7 @@ class VerfiedCoachings extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 30),
       width: double.infinity,
-      height: 390,
+      height: 340,
       color: cardBackgroundColor(),
       child: ListView(
         shrinkWrap: true,

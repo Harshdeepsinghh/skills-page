@@ -9,6 +9,7 @@ class Filters extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.only(left: 15),
       height: 80,
       child: ListView(
         scrollDirection: Axis.horizontal,

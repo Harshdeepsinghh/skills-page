@@ -10,9 +10,9 @@ Container kRepeatedCourcesByCoachings(
     required String price}) {
   return Container(
     margin: EdgeInsets.all(12),
-    width: 280,
+    width: 222,
     decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(40), color: whiteColor()),
+        borderRadius: BorderRadius.circular(30), color: whiteColor()),
     child: Column(
       children: [
         Stack(
@@ -26,16 +26,16 @@ Container kRepeatedCourcesByCoachings(
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(35),
-                      topRight: Radius.circular(35)),
+                      topLeft: Radius.circular(25),
+                      topRight: Radius.circular(25)),
                   color: Colors.black
                       .withOpacity(0.4), // Background color with opacity
                 ),
               ),
             ),
             Positioned(
-                top: 50,
-                left: 115,
+                top: 42,
+                left: 90,
                 child: Icon(
                   Icons.play_circle_fill_rounded,
                   size: 45,
@@ -47,7 +47,7 @@ Container kRepeatedCourcesByCoachings(
                 child: Container(
                   decoration: BoxDecoration(
                       color: whiteColor(),
-                      borderRadius: BorderRadius.circular(40)),
+                      borderRadius: BorderRadius.circular(30)),
                   width: 60,
                   height: 28,
                   child: Row(
@@ -137,7 +137,7 @@ Container kRepeatedCourcesByCoachings(
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
                     color: primaryColor(),
-                    borderRadius: BorderRadius.circular(40)),
+                    borderRadius: BorderRadius.circular(30)),
                 child: Center(
                   child: Text(
                     "Buy Now",
@@ -152,7 +152,7 @@ Container kRepeatedCourcesByCoachings(
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
                     border: Border.all(color: primaryColor()),
-                    borderRadius: BorderRadius.circular(40)),
+                    borderRadius: BorderRadius.circular(30)),
                 child: Center(
                   child: Text(
                     "View Syllabus",

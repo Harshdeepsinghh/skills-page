@@ -10,10 +10,11 @@ class FAQs extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        SizedBox(height: 20),
         Text(
           'Frequently Asked Questions',
           style:
-              TextStyle(fontSize: 16, fontWeight: FontWeight.w800, height: 4),
+              TextStyle(fontSize: 16, fontWeight: FontWeight.w800, height: 2),
         ),
         kRepeatedQuestionsCard(context,
             question: 'Are these courses offered by Ostello?'),

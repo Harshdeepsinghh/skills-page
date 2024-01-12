@@ -4,10 +4,20 @@ import 'package:skill_section/constants/querry.dart';
 
 kRepeatedQuestionsCard(BuildContext context, {required String question}) {
   return Padding(
-    padding: const EdgeInsets.all(5),
-    child: Card(
-      surfaceTintColor: whiteColor(),
-      color: whiteColor(),
+    padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+    child: Container(
+      decoration: ShapeDecoration(
+        color: whiteColor(),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+        shadows: [
+          BoxShadow(
+            color: Color(0x0A000000),
+            blurRadius: 4,
+            offset: Offset(2, 2),
+            spreadRadius: 1,
+          ),
+        ],
+      ),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8),
         child: Row(

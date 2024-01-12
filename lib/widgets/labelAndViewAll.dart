@@ -11,7 +11,7 @@ class LabelAndViewAll extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 0),
+      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
       child: Row(
         children: [
           Text(
@@ -19,7 +19,6 @@ class LabelAndViewAll extends StatelessWidget {
             style: TextStyle(
               color: Colors.black,
               fontSize: 16,
-              height: 3,
               fontWeight: FontWeight.w800,
             ),
           ),

@@ -12,10 +12,10 @@ verifiedCoachings(
     required String course,
     required}) {
   return Container(
-    margin: EdgeInsets.symmetric(horizontal: 15),
+    margin: EdgeInsets.symmetric(horizontal: 10),
     decoration: BoxDecoration(
         color: whiteColor(), borderRadius: BorderRadius.circular(40)),
-    width: 300,
+    width: 222,
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -76,9 +76,9 @@ Row kCoursesNames({required String course}) {
         "assets/images/open book.svg",
         height: 18,
       ),
-      SizedBox(width: 10),
+      SizedBox(width: 3),
       SizedBox(
-        width: 200,
+        width: 184,
         child: Text(
           course,
           softWrap: true,
