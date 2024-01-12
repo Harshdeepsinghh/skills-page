@@ -13,7 +13,7 @@ class LearnOnlineAndOffline extends StatelessWidget {
       shrinkWrap: true,
       gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
         maxCrossAxisExtent: 200, // Set the maximum width of each grid item
-        mainAxisSpacing: 5,
+        mainAxisSpacing: 10,
         crossAxisSpacing: 10,
         childAspectRatio: 1.5,
       ),
@@ -22,13 +22,13 @@ class LearnOnlineAndOffline extends StatelessWidget {
             image: "assets/images/coaching videos.png",
             label: 'Coaching Videos'),
         kRepeatedOfflineOnlineCard(
-            image: "assets/images/learn anytime.png", label: 'Coaching Videos'),
+            image: "assets/images/learn anytime.png", label: 'Learn Anytime'),
         kRepeatedOfflineOnlineCard(
             image: "assets/images/lifetime access.png",
-            label: 'Coaching Videos'),
+            label: 'Lifetime Access'),
         kRepeatedOfflineOnlineCard(
             image: "assets/images/include certificate.png",
-            label: 'Coaching Videos'),
+            label: 'Include Certification'),
       ],
     );
   }
